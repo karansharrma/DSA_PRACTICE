@@ -1,35 +1,33 @@
-
 /* Input Format: N = 3
 Result: 
- *  
-*** 
-*****   
+*****  
+ ***
+  *   
 Input Format: N = 6
-Result:
-    *     
-   ***    
-  *****   
- *******  
- ********* 
+Result:     
 ***********
-
+ *********
+  *******
+   ***** 
+    ***    
+     *
+     
 */
-import java.util.*;;
 
-public class pattern7 {
+import java.util.Scanner;
+
+public class pattern8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < n - i - 1; j++) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
                 System.out.print(" ");
             }
-            for (int j = 0; j < 2 * i + 1; j++) {
-
+            for (int k = 1; k <= 2 * n - 2 * i + 1; k++) {
                 System.out.print("*");
             }
             System.out.println();
         }
-        sc.close();
     }
 }
